@@ -1,5 +1,5 @@
-<mat-toolbar color="primary">
-  <div>
+<mat-toolbar  class="nav" color="primary">
+  <div class="1">
        <button mat-icon-button (click)="onToggleSidenav()">
           <mat-icon>menu</mat-icon>
       </button>
@@ -12,16 +12,16 @@
   </div>
   -->
   <div>
-      <a routerLink="/home">Owner-Account</a>
+      <a  class="2" routerLink="/home">Home</a>
   </div>
-  <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
-      <ul fxLayout fxLayoutGap="15px" class="navigation-items">
-          <li>
-              <a routerLink="/owner">Owner Actions</a>
-          </li>
-          <li>
-              <a routerLink="/account">Account Actions</a>
-          </li>
-      </ul>
+
+   <div>
+      <a  class="5" routerLink="/product">Product</a>
   </div>
+
+   <div>
+      <a  class="4" routerLink="/logistics">Logistics</a>
+  </div>
+
+
 </mat-toolbar>

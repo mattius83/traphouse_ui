@@ -1,3 +1,63 @@
+.application-container {
+  display: grid;
+  grid-template-columns: 70px auto 70px;
+  grid-template-rows: 150px auto 150px;
+  grid-gap: 3px;
+}
+
+.header-container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 50px 100px;
+}
+
+header,
+aside,
+article,
+footer {
+  background: #eaeaea;
+  padding: 1em;
+}
+
+.menu-bar {
+  grid-column: 1/4;
+  background: #eaeaea;
+  padding: 1em;
+}
+
+footer {
+  grid-column: 1 / 4;
+  display: flex;
+  alight-items: center;
+  justify-content: center;
+}
+
+header {
+  grid-column: 1 / 4;
+  alight-items: start;
+}
+
+/* Demo Specific Styles */
+body {
+  margin: 0 auto;
+  max-width: 56em;
+  padding: 1em 0;
+}
+
+/*
+.grid > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+*/
+
+#app-container {
+  background-color: light-blue;
+
+}
+
+
 mat-sidenav-container, mat-sidenav-content, mat-sidenav {
     height: 100%;
 }

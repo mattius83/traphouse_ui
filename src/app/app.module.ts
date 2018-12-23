@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { RoutingModule } from './routing/routing.module';
 import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
+import { ProductComponent } from './sections/product/product.component';
+import { LogisticsComponent } from './sections/logistics/logistics.component';
 // import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 
 @NgModule({
@@ -20,7 +22,8 @@ import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.com
     HeaderComponent,
     HeaderComponent,
     SidenavListComponent,
-   // SidenavListComponent
+    ProductComponent,
+    LogisticsComponent
   ],
   imports: [
     BrowserModule,
