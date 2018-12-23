@@ -1,9 +1,16 @@
 <mat-toolbar color="primary">
+  <div>
+       <button mat-icon-button (click)="onToggleSidenav()">
+          <mat-icon>menu</mat-icon>
+      </button>
+  </div>
+  <!-- if we want the hamburger menu button hidden for devices with screen greater than extra small (gt-xs)
   <div fxHide.gt-xs>
       <button mat-icon-button (click)="onToggleSidenav()">
           <mat-icon>menu</mat-icon>
       </button>
   </div>
+  -->
   <div>
       <a routerLink="/home">Owner-Account</a>
   </div>
