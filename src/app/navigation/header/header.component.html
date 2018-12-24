@@ -1,27 +1,52 @@
-<mat-toolbar  class="nav" color="primary">
-  <div class="1">
-       <button mat-icon-button (click)="onToggleSidenav()">
-          <mat-icon>menu</mat-icon>
-      </button>
-  </div>
-  <!-- if we want the hamburger menu button hidden for devices with screen greater than extra small (gt-xs)
-  <div fxHide.gt-xs>
-      <button mat-icon-button (click)="onToggleSidenav()">
-          <mat-icon>menu</mat-icon>
-      </button>
-  </div>
-  -->
-  <div>
-      <a  class="2" routerLink="/home">Home</a>
-  </div>
-
-   <div>
-      <a  class="5" routerLink="/product">Product</a>
-  </div>
-
-   <div>
-      <a  class="4" routerLink="/logistics">Logistics</a>
-  </div>
+<div class="header-container">
+    <div class="branding">
+        Angular Material Demonstration Application
+    </div>
 
 
-</mat-toolbar>
+    <mat-toolbar class="nav" color="primary" >
+      <div class="1 nav-item">
+           <button mat-icon-button (click)="onToggleSidenav()">
+              <mat-icon>menu</mat-icon>
+          </button>
+      </div>
+      <!-- if we want the hamburger menu button hidden for devices with screen greater than extra small (gt-xs)
+      <div fxHide.gt-xs>
+          <button mat-icon-button (click)="onToggleSidenav()">
+              <mat-icon>menu</mat-icon>
+          </button>
+      </div>
+      -->
+      <div>
+          <a  class="2 nav-item" routerLink="/home">Home</a>
+      </div>
+
+       <div class="3 nav-item">
+
+       </div>
+
+       <div class="4 nav-item">
+           Placeholder
+       </div>
+
+       <div class="5 nav-item">
+           Placeholder
+       </div>
+
+       <div class="6 nav-item">
+           Placeholder
+       </div>
+
+       <div>
+          <a  class="7 nav-item" routerLink="/logistics">Logistics</a>
+      </div>
+
+      <div>
+          <a  class="8 nav-item" routerLink="/product">Product</a>
+      </div>
+
+    </mat-toolbar>
+
+
+</div>
+
