@@ -1,0 +1,37 @@
+[
+    {
+       "category": "plane",
+       "year": 1978,
+       "make": "Cessna",
+       "model": "182RG Skylane"
+       "registration": "YV143E",
+       "serial": "R18200067",
+       "description": "The Skylane RG was introduced in 1978 to almost unanimous rave reviews from both the aviation press and, more importantly, the flying/buying public. A turbocharged version premiered a year later with essentially the identical engine supplemented by a blower. Turbocharging further expanded the airplane’s utility value and made it a viable model in the high country of the west."
+    }, 
+    {
+       "category": "plane",
+       "year": 1979,
+       "make": "Piper",
+       "model": "Arrow IV"
+       "registration": "N533R8",
+       "serial": "7918218",
+       "description": "The Arrow IV is a single engine, retractable, all metal airplane featuring the tail surfaces in a "T" configuration. It has seating for up to four occupants, a 200 pound luggage compartment, and a 200 HP engine."
+    },
+    {
+       "category": "plane",
+       "year": 1978,
+       "make": "Grumman",
+       "model": "GA-7 Cougar"
+       "registration": "N727GA",
+       "serial": "457789",
+       "description": "Designers of Grumman American’s GA–7 Cougar had a mission for their first twin-engine airplane. To attract pilots flying for business, then American Aviation president Russ Meyer wanted an airplane that could perform as well as a complex single, such as the Cessna 210, but have an extra engine to provide safety, comfort, and redundancy for flight at night and over inhospitable terrain. In this instance, the engineers nailed the design. It’s nearly a number-for-number performance clone of complex singles such as the 210 and Beechcraft Bonanza. Take off in about 1,000 feet, climb about 1,000 feet per minute, cruise at 160 KTAS. The only difference? Two simple, efficient engines instead of one big, hard-working engine."
+    },
+    {
+       "category": "plane",
+       "year": 1982,
+       "make": "Mooney",
+       "model": "M20K 305 Rocket"
+       "registration": "N252BQ",
+       "serial": "009tr45p",
+       "description": "Marketed as the Rocket 305, this variant delivered a 228-knot speed and 1,600 feet/minute rate of climb. ... The production-version Mooney Acclaim now delivers faster speeds. As Rockets are available in the used market for about one-third the cost of a new Acclaim, it maintains its popularity among a small market niche."
+    }
