@@ -1,0 +1,15 @@
+<div class="product-switcher-container">
+    <div id="back-control">
+         <button mat-icon-button color="accent" (click)="onPrevious()">
+            <mat-icon aria-label="Previous">skip_previous</mat-icon>
+        </button>
+    </div>
+    <div>
+        <app-product [vehicle]="currentVehicle"></app-product>
+    </div>
+    <div id="forward-control">
+        <button mat-icon-button color="accent" (click)="onNext()">
+            <mat-icon aria-label="Forward">skip_next</mat-icon>
+        </button>
+    </div>
+</div>

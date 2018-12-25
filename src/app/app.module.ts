@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import {FlexLayoutModule} from '@angular/flex-layout';
-
 import { AppComponent } from './app.component';
 import { LayoutComponent } from './layout/layout.component';
 import { HomeComponent } from './home/home.component';
@@ -12,7 +11,8 @@ import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 import { ProductComponent } from './sections/product/product.component';
 import { LogisticsComponent } from './sections/logistics/logistics.component';
-// import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
+import { ProductSwitcherComponent } from './sections/product/product-switcher.component';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +23,8 @@ import { LogisticsComponent } from './sections/logistics/logistics.component';
     HeaderComponent,
     SidenavListComponent,
     ProductComponent,
-    LogisticsComponent
+    LogisticsComponent,
+    ProductSwitcherComponent
   ],
   imports: [
     BrowserModule,

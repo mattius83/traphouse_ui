@@ -1,0 +1,262 @@
+[
+    {
+       "category": "plane",
+       "year": 1978,
+       "make": "Cessna",
+       "model": "182RG Skylane",
+       "registration": "YV143E",
+       "serial": "r18200067",
+       "description": "The Skylane RG was introduced in 1978 to almost unanimous rave reviews from both the aviation press and, more importantly, the flying/buying public. A turbocharged version premiered a year later with essentially the identical engine supplemented by a blower. Turbocharging further expanded the airplane’s utility value and made it a viable model in the high country of the west."
+    }, 
+    {
+       "category": "plane",
+       "year": 1979,
+       "make": "Piper",
+       "model": "Arrow IV",
+       "registration": "N533R8",
+       "serial": "7918218",
+       "description": "The Arrow IV is a single engine, retractable, all metal airplane featuring the tail surfaces in a 'T' configuration. It has seating for up to four occupants, a 200 pound luggage compartment, and a 200 HP engine."
+    },
+    {
+       "category": "plane",
+       "year": 1978,
+       "make": "Grumman",
+       "model": "GA-7 Cougar",
+       "registration": "N727GA",
+       "serial": "457789",
+       "description": "Designers of Grumman American’s GA–7 Cougar had a mission for their first twin-engine airplane. To attract pilots flying for business, then American Aviation president Russ Meyer wanted an airplane that could perform as well as a complex single, such as the Cessna 210, but have an extra engine to provide safety, comfort, and redundancy for flight at night and over inhospitable terrain. In this instance, the engineers nailed the design. It’s nearly a number-for-number performance clone of complex singles such as the 210 and Beechcraft Bonanza. Take off in about 1,000 feet, climb about 1,000 feet per minute, cruise at 160 KTAS. The only difference? Two simple, efficient engines instead of one big, hard-working engine."
+    },
+    {
+       "category": "plane",
+       "year": 1982,
+       "make": "Mooney",
+       "model": "M20K 305 Rocket",
+       "registration": "N252BQ",
+       "serial": "009tr45p",
+       "description": "Marketed as the Rocket 305, this variant delivered a 228-knot speed and 1,600 feet/minute rate of climb. ... The production-version Mooney Acclaim now delivers faster speeds. As Rockets are available in the used market for about one-third the cost of a new Acclaim, it maintains its popularity among a small market niche."
+    },
+    {
+       "category": "plane",
+       "year": 1994,
+       "make": "Sky Arrow",
+       "model": "650TC",
+       "registration": "BBQ56TYP",
+       "serial": "sa45889",
+       "description": "Surveillance aircraft. Certified in the Very Light Aircraft (VLA) Category; ; TSOH: 402 hrs Overhaul completed on 25/10/2011 at TT: 353 hrs TBO: 2000 hrs / 15 years Airframe; King KX155 NAV COM King KT76A Transponder Mode C Vacuum System Astro Tech LA-2 Digital Chronometer Avionics/Radios"
+    },
+    {
+       "category": "plane",
+       "year": 2010,
+       "make": "Jabiru",
+       "model": "J430",
+       "registration": "EP-1179",
+       "serial": "jab56992",
+       "description": "Stall speed full flap 40kt Stall speed clean 45kt Max cruising speed 120kt Vne 140kt Rate of climb at SL 700ft/min Max range 740nm (no reserves) Endurance > 7 hours Fuel capacity 135 litres Empty 360kg MTOW 600kg factory built; 700kg kit built Wing span 9.58m "
+    },
+    {
+       "category": "plane",
+       "year": 1931,
+       "make": "Stinson",
+       "model": "SM6000B",
+       "registration": "N11153",
+       "serial": "stin43221",
+       "description": "This Stinson SM 6000B is American Airlines’ oldest surviving airliner and the livery, or paint scheme, you see it in now is exactly as it appeared when it was in service with American in 1932.; ; Fully restored Stinson Tri-motor. This is American Airlines oldest aircraft"
+    },
+    {
+       "category": "plane",
+       "year": 1999,
+       "make": "Diamond",
+       "model": "DA20-C1 Evolution",
+       "registration": "C-FKOS",
+       "serial": "da33265",
+       "description": "Privately owned! Hangared!; ; 5621.7 Airframe; King KA134 Audio Panel King KX125 COM King KLX135 GPS King KT76A Transponder Avionics/Radios; Continental 125 HP IO-240B 1500 Engine(s); White w/Blue Trim Exterior; VFR FlightRules; Annaul is not current, included with purchase!"
+    },   
+  {
+       "category": "plane",
+       "year": 1992,
+       "make": "Piaggio",
+       "model": "P-180 Avanti",
+       "registration": "N155SY",
+       "serial": "pi33221",
+       "description": "If you talk to anyone who knows Piaggio's, this serial number has always been one of the best and with the inflight connectivity, you can't go wrong with this platform.; ; EFIS Collins 85B (3-tube) w/co-pilots EHSI 74 COMMS Dual Collins"
+    },   
+ {
+       "category": "plane",
+       "year": 1966,
+       "make": "Learjet",
+       "model": "24XR",
+       "registration": "N24SA",
+       "serial": "le98689",
+       "description": "Hush Kits, Recent 12-Year Inspection; ; COLLINS VHF-20A & COLLINS 618M2B COMM TRANSCEIVERS, GARMIN GNS-430 COMM/GPS/NAV/MAP WITH TERRAIN, DUAL WILCOX 806A NAV RECEIVERS, BENDIX KING RDS-81 COLOR RADAR, DUAL COLLINS TDR-90 TRANSPONDERS, BENDIX/KING KN63 DME, COLLINS 51Y-4 ADF, DUAL AERONETICS 3137"
+    },    
+  {
+       "category": "helicopter",
+       "year": 2009,
+       "make": "Sikorsky",
+       "model": "S-76C++",
+       "registration": "PR-LDB",
+       "serial": "si00798",
+       "description": "FOR SALE 2009 S76C++ OFFSHORE EQUIPPED; ; UTILITY 12 PASSENGER INTERIOR HONEYWELL AFCS (2) VHF COMM COLLINS VHF-22A (2) VHF NAV COLLINS VIR-32A (2) ADF COLLINS-462A DME COLLINS MARKER BEASON COLLINS TRANSPONDER COLLINS EGPWS HONEYWELL GPS GARMIN 430 GPS 2 GARMIN 400 RADAR PRIMUS 440 FLIGHT"
+  },
+  {
+       "category": "helicopter",
+       "year": 2006,
+       "make": "Enstrom",
+       "model": "480B Turbine",
+       "registration": "F-REG",
+       "serial": "en32321",
+       "description": "Helicopter is in perfect condition - Perfect maintenance by Ministry of the Interior Estonia ( EUROPE ) Use by Police and Border Guard Boarder Pilot only.; ; VFR FlightRules; Rolls Royce 250C-20W 1567H since new Maintenance by PART 145 EASA Engine(s); 2 X RC Allen 26BK Altitude Gyro RC Allen"
+  }, 
+  {
+       "category": "helicopter",
+       "year": 1972,
+       "make": "Bell",
+       "model": "OH-58A",
+       "registration": "C-CYBT",
+       "serial": "be4433",
+       "description": "This beautiful machine is ready to go. Fresh Annual! Aircraft is subject to verification of specifications, logs, times, damage and all equipment listed.; ; G406 GPS 150XL KY 196A Garmin Aera 796 GPS Garmin GPS maps 496 GT-50 Flight data systems – clock, G-meter, timer GTX 327 transponder"
+  },    
+   {
+       "category": "helicopter",
+       "year": 2017,
+       "make": "Helisport",
+       "model": "CH77 Ranabot",
+       "registration": "OK-WHA 82",
+       "serial": "ra34456",
+       "description": "Ranabot reconsiders technology with experience ,the result of 20 years working in the sector, synthesized and further improved . first owner, the best on the market, no demage history.; ; KRT 2 + Radio, BOSE A20 Headphones Casters waterproof with the possibility of logo printing, advertising"
+  },
+  {
+       "category": "helicopter",
+       "year": 2016,
+       "make": "Robinson",
+       "model": "R44 Clipper II",
+       "registration": "PT433-X",
+       "serial": "ro4433",
+       "description": "2016 Clipper II; 550 hrs TTSN, black metallic, tan leather, Aspen glass panel, AUTOPILOT, A/C, Garmin GTN 750, radar altimeter, Kannad, GTX 330, ADS-B out, tinted bubble windows, extra strobe, USB ports, 4 Bose headsets. Forced to Sell because of illness.; ; Aspen Glass Panel Autopilot Garmin"
+  },
+   {
+       "category": "helicopter",
+       "year": 1990,
+       "make": "Hughes",
+       "model": "300C",
+       "registration": "F-HAAN",
+       "serial": "hu7721",
+       "description": "This helicopter has very low flying hours and lots of potential hours on the different parts. The helicopter was flown privately by the previous owner, and after that scenic and photo flights by only 1 pilot. Rotor blades are in a almost new state. ; ; Engine hours : 351,2 hours"
+  },
+  {
+       "category": "helicopter",
+       "year": 2006,
+       "make": "Schweizer",
+       "model": "300C",
+       "registration": "N300HB",
+       "serial": "sc4431",
+       "description": "Garmin GNS-420 COMM/GPS, Aux Fuel Tank (66 Total Gallon System), STAR System (Start Up Limiter/ Auto Engagement/ Low Rotor Warning), Dual Controls, Night Lights, Single Latch Doors, Vertical Card Compass, ELT, Landing Gear Contact Hobbs, Master Avionics Switch, LC-2 Clock, Attitude Gyro, NAT AA80"
+  }, 
+  {
+       "category": "helicopter",
+       "year": 2019,
+       "make": "Leonardo",
+       "model": "AW139",
+       "registration": "RT-X900",
+       "serial": "le4590",
+       "description": "The AW139 is the market-leading intermediate twin-engine helicopter - the benchmark for safety design features, performance capabilities and productivity in challenging multi-role operations all over the world. The aircraft features leading edge technology, including a Honeywell Primus Epic"
+  },
+  {
+       "category": "helicopter",
+       "year": 2019,
+       "make": "Leonardo",
+       "model": "AW109 Trekker",
+       "registration": "FL8-71",
+       "serial": "le2288",
+       "description": "The AW109 Trekker is the newest light twin-engine helicopter in the 3-tonne class; ideally suited to training, utility and aerial work operations which require best-in-class lifting capability, alongside superior range and performance. The aircraft features a large, rapidly reconfigurable"
+  },
+{
+       "category": "helicopter",
+       "year": 2019,
+       "make": "Leonardo",
+       "model": "AW189",
+       "registration": "STA-443",
+       "serial": "le228906",
+       "description": "The AW189 is the latest-generation, high performance 8.3 / 8.6 tonne twin-engine helicopter, designed to answer the growing market demand for a versatile, affordable, multirole platform. The platform exceeds the most recent FAA and EASA Part 29 safety standards, ideal for demanding SAR"
+  },
+{
+       "category": "tour_bus",
+       "year": 2019,
+       "make": "Prevost",
+       "model": "Nickelodeon X3-45",
+       "registration": "PA-RTY67",
+       "serial": "pr33445",
+       "description": "This luxurious motor coach is perfect for the band on tour.  12 bunk and 12 seats, this baby sleeps 12 people very comfortably.  Beautiful floor plan with refrigerator microwave, corion countertops, sink, shower, restroom.  Includes tiled floors with entertainment center and 3 32 inch flat screen TVs."
+},
+{
+       "category": "tour_bus",
+       "year": 1984,
+       "make": "MCI",
+       "model": "96A2",
+       "registration": "VA-CA2789",
+       "serial": "mc20098",
+       "description": "This 1984 MCI 96A2 has been converted and upgraded with many great features. The bus runs great and has a newer engine and transmission. This MCI sleeps six people comfortable. This MCI conversion is ready to go.  Master BD, twin bunk beds, kitchen island, rear back up camera, right side passing camera, baggage compartment, full kitchen, bathtub"
+},
+{
+       "category": "tour_bus",
+       "year": 2005,
+       "make": "Country Coach",
+       "model": "Intrigue Limited",
+       "registration": "HA-V3FUN",
+       "serial": "co33441",
+       "description": "Beautiful 40 Foot Custom Coach Conversion, 2005 Country Coach Intrigue Limited Edition Bus Conversion for Sale. This custom coach conversion is loaded, and has a recently rebuilt Cummins Motor with a low 25,000 miles since the rebuild! Always stored inside a garage while not in use this wonderful motorhome coach has always been meticulously cared for throughout its life."
+},
+{
+       "category": "locomotive",
+       "year": 1972,
+       "make": "AGPX",
+       "model": "4191",
+       "registration": "PT70098",
+       "serial": "ag12345",
+       "description": "no dynamic brake; D12B Generator; pneumatic switch gear, 1 1/8 inch or better wheel size; engine is a 16-567-C"
+},
+{
+       "category": "locomotive",
+       "year": 2018,
+       "make": "NRE",
+       "model": "2GS-14B",
+       "registration": "SWR45-T",
+       "serial": "nre33778",
+       "description": "The N-ViroMotive is the first design innovation over the single engine prime mover, which was developed in the 1950s. This rethinking of locomotive design allows the N-ViroMotive to apply a new configuration to standard rail purposes for superior results"
+
+},         
+{
+       "category": "locomotive",
+       "year": 2016,
+       "make": "NRE",
+       "model": "3GS-21C ULEL Unit",
+       "registration": "COTO9987",
+       "serial": "nre44559",
+       "description": "The GenSet N-ViroMotive locomotive was developed and designed by NRE between 2001 and 2005 in response to the California Air Resources Board more stringent environmental regulations. The first engine went into service in 2007. While originally proto-typed for major Class I switching yard services in southern California and southeast Texas, the N-ViroMotive's achievement of ultra low emissions and noise as well as the significant fuel consumption savings it produces, has allowed the N-ViroMotive to expand to other markets"
+}              
+                                                               
+]         
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+       
