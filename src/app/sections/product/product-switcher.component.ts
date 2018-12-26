@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as vehicleModule from './vehicles.json';
+import * as vehicleModule from '../../data/vehicles.json';
 import { Vehicle } from './vehicle';
 
 @Component({

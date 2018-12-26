@@ -4,11 +4,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from '../home/home.component';
 import { ProductSwitcherComponent } from '../sections/product/product-switcher.component';
 import { LogisticsComponent } from '../sections/logistics/logistics.component';
+import { OperatorsComponent } from '../sections/operators/operators.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'product', component: ProductSwitcherComponent },
   { path: 'logistics', component: LogisticsComponent },
+  { path: 'operators', component: OperatorsComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
 

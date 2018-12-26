@@ -12,6 +12,7 @@ import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.com
 import { ProductComponent } from './sections/product/product.component';
 import { LogisticsComponent } from './sections/logistics/logistics.component';
 import { ProductSwitcherComponent } from './sections/product/product-switcher.component';
+import { OperatorsComponent } from './sections/operators/operators.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { ProductSwitcherComponent } from './sections/product/product-switcher.co
     SidenavListComponent,
     ProductComponent,
     LogisticsComponent,
-    ProductSwitcherComponent
+    ProductSwitcherComponent,
+    OperatorsComponent
   ],
   imports: [
     BrowserModule,
