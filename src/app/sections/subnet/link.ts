@@ -8,13 +8,7 @@ var Link = joint.dia.Link.define('demo.Link', {
                connection: true,
                stroke: 'gray',
                strokeWidth: 2,
-               pointerEvents: 'none',
-               targetMarker: {
-                   type: 'path',
-                   fill: 'gray',
-                   stroke: 'none',
-                   d: 'M 10 -10 0 0 10 10 z'
-               }
+               pointerEvents: 'none'
            }
        },
        connector: {
@@ -30,22 +24,12 @@ var Link = joint.dia.Link.define('demo.Link', {
            height: 30
        },
        labels: [{
-           markup: [{
-               tagName: 'rect',
-               selector: 'labelBody'
-           }, {
+           markup: [ {
                tagName: 'text',
                selector: 'labelText'
            }],
            attrs: {
-               labelText: {
-                   fill: 'gray',
-                   textAnchor: 'middle',
-                   refY: 5,
-                   refY2: '-50%',
-                   fontSize: 20,
-                   cursor: 'pointer'
-               },
+
                labelBody: {
                    fill: 'lightgray',
                    stroke: 'gray',
