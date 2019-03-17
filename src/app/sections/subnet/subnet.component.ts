@@ -5,6 +5,7 @@ import * as backbone from 'backbone';
 import * as joint from 'jointjs';
 import {Shape} from './shape';
 import {Link} from './link';
+import { NetworkInfoService } from '../../services/network-info.service';
 
 
 
@@ -17,11 +18,15 @@ export class SubnetComponent implements OnInit {
 
   graph: any;
 
-  constructor() {
+  constructor(private netinfoService: NetworkInfoService) {
      this.graph = new joint.dia.Graph;
   }
 
   ngOnInit() {
+
+    let test_data = this.netinfoService.getJSON().subscribe(data=> {
+        console.log(data);
+    });
 
     let paper = new joint.dia.Paper({
       el: $("#paper"),
