@@ -1,32 +1,32 @@
 [
-  { "node_name": "Dallas",
+  { "name": "Dallas",
     "id": "d001",
-    "sys_admin":  "Tom Curtis",
+    "sysAdmin":  "Tom Curtis",
     "connections": ["m005", "r018", "p210"]
   },
-  { "node_name": "Memphis",
+  { "name": "Memphis",
     "id": "m005",
-    "sys_admin":  "Sarah Fleming",
+    "sysAdmin":  "Sarah Fleming",
     "connections": []
   },
-  { "node_name": "Philadelphia",
+  { "name": "Philadelphia",
     "id": "p210",
-    "sys_admin":  "Peter Corbin",
+    "sysAdmin":  "Peter Corbin",
     "connections": ["s005"]
   },
-  { "node_name": "Sacramento",
+  { "name": "Sacramento",
     "id": "s005",
-    "sys_admin":"Sharif Obdela",
+    "sysAdmin":"Sharif Obdela",
     "connections": []
   },
-  { "node_name": "Rochester",
+  { "name": "Rochester",
     "id": "r018",
-    "sys_admin":  "Susan Weinback",
+    "sysAdmin":  "Susan Weinback",
     "connections": ["d003"]
   },
-  { "node_name": "Denver",
+  { "name": "Denver",
     "id": "d003",
-    "sys_admin":  "Andrea Plaggart",
+    "sysAdmin":  "Andrea Plaggart",
     "connections": []
   }
 ]

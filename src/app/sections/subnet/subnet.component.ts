@@ -3,8 +3,9 @@ declare var $:JQueryStatic;
 import * as _ from 'lodash';
 import * as backbone from 'backbone';
 import * as joint from 'jointjs';
-import {Shape} from './shape';
-import {Link} from './link';
+import { Shape } from './shape';
+import { Link } from './link';
+import { Subnet } from './subnet';
 import { NetworkInfoService } from '../../services/network-info.service';
 
 
@@ -17,16 +18,24 @@ import { NetworkInfoService } from '../../services/network-info.service';
 export class SubnetComponent implements OnInit {
 
   graph: any;
+  subnetList: Array<Subnet>;
 
   constructor(private netinfoService: NetworkInfoService) {
      this.graph = new joint.dia.Graph;
+     this.subnetList = [];
   }
 
   ngOnInit() {
 
-    let test_data = this.netinfoService.getSubnets().subscribe(data=> {
-        console.log(data);
+    this.netinfoService.getSubnets().subscribe( data => {
+        _.map(data, (entry:any) => {
+            let sn: Subnet = new Subnet(entry.name, entry.id, entry.sysAdmin, entry.connections);
+            this.subnetList.push(sn);
+        });
+        console.log("Here are the subnets");
+        console.log(this.subnetList);
     });
+
 
     let paper = new joint.dia.Paper({
       el: $("#paper"),
