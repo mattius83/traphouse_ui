@@ -1,7 +1,7 @@
-declare var $:JQueryStatic;
-import * as _ from 'lodash';
-import * as backbone from 'backbone';
-import * as joint from 'jointjs';
+// declare var $:JQueryStatic;
+// import * as _ from 'lodash';
+// import * as backbone from 'backbone';
+ import * as joint from 'jointjs';
 
 var Shape = joint.dia.Element.define('demo.Shape', {
         size: {
