@@ -3,6 +3,9 @@ declare var $:JQueryStatic;
 import * as _ from 'lodash';
 import * as backbone from 'backbone';
 import * as joint from 'jointjs';
+import {Shape} from './shape';
+
+
 
 @Component({
   selector: 'app-logistics',
@@ -11,20 +14,30 @@ import * as joint from 'jointjs';
 })
 export class LogisticsComponent implements OnInit {
 
-  constructor() { }
+  graph: any;
+
+  constructor() {
+     this.graph = new joint.dia.Graph;
+  }
 
   ngOnInit() {
-    let graph = new joint.dia.Graph;
 
     let paper = new joint.dia.Paper({
       el: $("#paper"),
-      model: graph,
+      model: this.graph,
       height: $("#diagram").height(),
       width: $("#diagram").width(),
       // width: 300,
       gridSize: 1
     });
 
+    this.buildSampleGraph();
+
+  }
+
+
+
+  buildSampleGraph() {
     let rect = new joint.shapes.basic.Rect({
       position: { x: 100, y: 30 },
       size: { width: 100, height: 30 },
@@ -39,7 +52,8 @@ export class LogisticsComponent implements OnInit {
       target: { id: rect2.id }
     });
 
-    graph.addCells([rect, rect2, link]);
+    var myShape = new Shape({ id: "ba707" }).setText("G7");
+    myShape.position(300,200);
+    this.graph.addCells([rect, rect2, link, myShape]);
   }
-
 }
