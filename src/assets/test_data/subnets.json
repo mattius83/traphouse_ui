@@ -1,0 +1,32 @@
+[
+  { "node_name": "Dallas",
+    "id": "d001",
+    "sys_admin":  "Tom Curtis",
+    "connections": ["m005", "r018", "p210"]
+  },
+  { "node_name": "Memphis",
+    "id": "m005",
+    "sys_admin":  "Sarah Fleming",
+    "connections": []
+  },
+  { "node_name": "Philadelphia",
+    "id": "p210",
+    "sys_admin":  "Peter Corbin",
+    "connections": ["s005"]
+  },
+  { "node_name": "Sacramento",
+    "id": "s005",
+    "sys_admin":"Sharif Obdela",
+    "connections": []
+  },
+  { "node_name": "Rochester",
+    "id": "r018",
+    "sys_admin":  "Susan Weinback",
+    "connections": ["d003"]
+  },
+  { "node_name": "Denver",
+    "id": "d003",
+    "sys_admin":  "Andrea Plaggart",
+    "connections": []
+  }
+]

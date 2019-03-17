@@ -24,7 +24,7 @@ export class SubnetComponent implements OnInit {
 
   ngOnInit() {
 
-    let test_data = this.netinfoService.getJSON().subscribe(data=> {
+    let test_data = this.netinfoService.getSubnets().subscribe(data=> {
         console.log(data);
     });
 
