@@ -1,0 +1,6 @@
+#diagram {
+    height: 600px;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: auto;
+}

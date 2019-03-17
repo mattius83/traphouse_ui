@@ -18,9 +18,10 @@ export class LogisticsComponent implements OnInit {
 
     let paper = new joint.dia.Paper({
       el: $("#paper"),
-      width: 600,
-      height: 200,
       model: graph,
+      height: $("#diagram").height(),
+      width: $("#diagram").width(),
+      // width: 300,
       gridSize: 1
     });
 
