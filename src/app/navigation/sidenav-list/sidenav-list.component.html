@@ -2,9 +2,7 @@
   <a mat-list-item routerLink="/home" (click)="onSidenavClose()">
     <mat-icon>home</mat-icon> <span class="nav-caption">Home</span>
   </a>
-  <a mat-list-item routerLink="/product" (click)="onSidenavClose()">
-    <mat-icon>shopping_cart</mat-icon> <span class="nav-caption">Product</span>
-  </a>
+
   <a mat-list-item routerLink="/subnet" (click)="onSidenavClose()">
     <mat-icon>business</mat-icon><span class="nav-caption">Subnets</span>
   </a>
@@ -12,6 +10,9 @@
     <mat-icon>group</mat-icon><span class="nav-caption">Operators</span>
   </a>
 
+  <a mat-list-item  (click)="onSidenavClose()">
+    <mat-icon>alarm</mat-icon> <span class="nav-caption">Placeholder</span>
+  </a>
   <mat-list-item [matMenuTriggerFor]="menu">
     <mat-icon>unfold_more</mat-icon>
     <a matline>Example</a>

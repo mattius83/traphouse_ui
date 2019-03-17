@@ -1,6 +1,0 @@
-.product-switcher-container {
-  display: grid;
-  grid-template-columns: 40px auto 40px;
-  justify-items: center;
-  align-items: top;
-}

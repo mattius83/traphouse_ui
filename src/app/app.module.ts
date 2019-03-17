@@ -9,9 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { RoutingModule } from './routing/routing.module';
 import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
-import { ProductComponent } from './sections/product/product.component';
 import { SubnetComponent } from './sections/subnet/subnet.component';
-import { ProductSwitcherComponent } from './sections/product/product-switcher.component';
 import { OperatorsComponent } from './sections/operators/operators.component';
 
 
@@ -23,9 +21,7 @@ import { OperatorsComponent } from './sections/operators/operators.component';
     HeaderComponent,
     HeaderComponent,
     SidenavListComponent,
-    ProductComponent,
     SubnetComponent,
-    ProductSwitcherComponent,
     OperatorsComponent
   ],
   imports: [
