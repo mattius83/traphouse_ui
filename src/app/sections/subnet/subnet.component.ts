@@ -9,11 +9,11 @@ import {Link} from './link';
 
 
 @Component({
-  selector: 'app-logistics',
-  templateUrl: './logistics.component.html',
-  styleUrls: ['./logistics.component.css']
+  selector: 'subnet',
+  templateUrl: './subnet.component.html',
+  styleUrls: ['./subnet.component.css']
 })
-export class LogisticsComponent implements OnInit {
+export class SubnetComponent implements OnInit {
 
   graph: any;
 
