@@ -19,6 +19,7 @@ export class SubnetComponent implements OnInit {
 
   graph: any;
   subnetList: Array<Subnet>;
+  adjacencyList: any;
 
   constructor(private netinfoService: NetworkInfoService) {
      this.graph = new joint.dia.Graph;
@@ -34,6 +35,9 @@ export class SubnetComponent implements OnInit {
         });
         console.log("Here are the subnets");
         console.log(this.subnetList);
+        this.adjacencyList = this.buildAdjacencyList(this.subnetList);
+        console.log("Here is the resulting adjacencyList: ");
+        console.log(this.adjacencyList);
     });
 
 
@@ -63,6 +67,21 @@ export class SubnetComponent implements OnInit {
     this.graph.resetCells(cells);
     joint.layout.DirectedGraph.layout(this.graph, {} );
 
+  }
+
+  /* Builds a dictionary representing an adjacencyList where the keys in the
+   * dictionary are the IDs from the subnets
+   */
+  buildAdjacencyList(subnetList: Array<Subnet>):any {
+      let result:any = { };
+
+      _.map(subnetList, (entry:Subnet) => {
+          result[entry.id] = [];
+          _.map(entry.connections, connectedId => {
+              result[entry.id].push(connectedId);
+          });
+      });
+      return result;
   }
 
   buildGraphFromAdjacencyList(adjacencyList) {
