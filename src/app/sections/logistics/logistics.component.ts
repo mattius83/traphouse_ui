@@ -32,8 +32,52 @@ export class LogisticsComponent implements OnInit {
       gridSize: 1
     });
 
-    this.buildSampleGraph();
+  //   this.buildSampleGraph();
+  let alist = {
+            a: ['b','c','d'],
+            b: ['d', 'e'],
+            c: [],
+            d: [],
+            e: ['e'],
+            f: [],
+            g: ['b','i'],
+            h: ['f'],
+            i: ['f','h']
+        };
 
+    let cells = this.buildGraphFromAdjacencyList(alist);
+    this.graph.resetCells(cells);
+    joint.layout.DirectedGraph.layout(this.graph, {} );
+
+  }
+
+  buildGraphFromAdjacencyList(adjacencyList) {
+
+       var elements = [];
+       var links = [];
+
+       Object.keys(adjacencyList).forEach(function(parentLabel) {
+           // Add element
+           let elem = new Shape({id: parentLabel});
+           elem.attr('label/text', parentLabel);
+           elements.push(elem);
+
+           // Add links
+           adjacencyList[parentLabel].forEach(function(childLabel) {
+               let link = new Link();
+               link.set({
+                   source: { id: parentLabel },
+                   target: { id: childLabel }
+               });
+              // link.connect(parentLabel, childLabel);
+               links.push(link);
+           });
+       });
+
+       // Links must be added after all the elements. This is because when the links
+       // are added to the graph, link source/target
+       // elements must be in the graph already.
+       return elements.concat(links);
   }
 
 
@@ -71,8 +115,11 @@ export class LogisticsComponent implements OnInit {
                          .setLabelText("a link");
     */
     var link = new Link();
-    link.connect("ba707", "ba708").setLabelText("m link");
-
+    // link.connect("ba707", "ba708").setLabelText("m link");
+    link.set({
+        source: { id: "ba707" },
+        target: { id: "ba708" }
+    });
     this.graph.addCells([rect, rect2, shape_a, shape_b, link]);
   }
 }
