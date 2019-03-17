@@ -23,7 +23,7 @@ var Shape = joint.dia.Element.define('demo.Shape', {
                 refY: '50%',
                 yAlignment: 'middle',
                 xAlignment: 'middle',
-                fontSize: 30
+                fontSize: 15
             }
         }
     }, {
