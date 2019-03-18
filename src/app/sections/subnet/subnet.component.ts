@@ -70,7 +70,8 @@ export class SubnetComponent implements OnInit {
       gridSize: 1
     });
 
-    paper.on('cell:pointerclick', function(cellView) {
+    paper.on('cell:pointerclick', cellView => {
+      this.resetAll(paper);
       let isElement = cellView.model.isElement();
       let currentElement = cellView.model;
       console.log("Here is the currentElement");
@@ -81,6 +82,27 @@ export class SubnetComponent implements OnInit {
     let cells = this.buildGraphFromAdjacencyList(adjacencyList);
     this.graph.resetCells(cells);
     joint.layout.DirectedGraph.layout(this.graph, {} );
+  }
+
+  resetAll(paper) {
+    var elements = paper.model.getElements();
+    for (var i = 0, ii = elements.length; i < ii; i++) {
+        var currentElement = elements[i];
+        currentElement.attr('body/stroke', 'black');
+    }
+
+    var links = paper.model.getLinks();
+    for (var j = 0, jj = links.length; j < jj; j++) {
+        var currentLink = links[j];
+        currentLink.attr('line/stroke', 'black');
+        currentLink.label(0, {
+            attrs: {
+                body: {
+                    stroke: 'black'
+                }
+            }
+        })
+    }
   }
 
   /* Builds a dictionary representing an adjacencyList where the keys in the
