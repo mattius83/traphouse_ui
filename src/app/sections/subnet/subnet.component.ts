@@ -70,6 +70,14 @@ export class SubnetComponent implements OnInit {
       gridSize: 1
     });
 
+    paper.on('cell:pointerclick', function(cellView) {
+      let isElement = cellView.model.isElement();
+      let currentElement = cellView.model;
+      console.log("Here is the currentElement");
+      console.log(currentElement);
+      currentElement.attr('body/stroke', 'orange');
+    });
+
     let cells = this.buildGraphFromAdjacencyList(adjacencyList);
     this.graph.resetCells(cells);
     joint.layout.DirectedGraph.layout(this.graph, {} );
