@@ -19,10 +19,12 @@ export class SubnetComponent implements OnInit {
 
   graph: any;
   subnetList: Array<Subnet>;
+  subnetDict: any;
 
   constructor(private netinfoService: NetworkInfoService) {
      this.graph = new joint.dia.Graph;
      this.subnetList = [];
+     this.subnetDict = { };
   }
 
   ngOnInit() {
@@ -35,13 +37,27 @@ export class SubnetComponent implements OnInit {
             let sn: Subnet = new Subnet(entry.name, entry.id, entry.sysAdmin, entry.connections);
             this.subnetList.push(sn);
         });
+        this.buildSubnetDictionary(this.subnetList);
+        /*
         console.log("Here are the subnets");
         console.log(this.subnetList);
+        console.log("Here is the subnet dictionary: ");
+        console.log(this.subnetDict);
+        */
+
         let alist = this.buildAdjacencyList(this.subnetList);
+        /*
         console.log("Here is the resulting adjacencyList: ");
         console.log(alist);
+        */
         this.renderDirectedGraph(alist);
     });
+  }
+
+  buildSubnetDictionary(subnets: Array<Subnet>): void {
+      _.map(subnets, (entry: Subnet) => {
+        this.subnetDict[entry.id] = entry;
+      });
   }
 
   renderDirectedGraph(adjacencyList:any): void {
@@ -79,17 +95,18 @@ export class SubnetComponent implements OnInit {
        var elements = [];
        var links = [];
 
-       Object.keys(adjacencyList).forEach(function(parentLabel) {
+       Object.keys(adjacencyList).forEach(subnetId =>  {
            // Add element
-           let elem = new Shape({id: parentLabel});
-           elem.attr('label/text', parentLabel);
+           let elem = new Shape({id: subnetId});
+           let currentSubnet = this.subnetDict[subnetId];
+           elem.attr('label/text', currentSubnet.name);
            elements.push(elem);
 
            // Add links
-           adjacencyList[parentLabel].forEach(function(childLabel) {
+           adjacencyList[subnetId].forEach(function(childLabel) {
                let link = new Link();
                link.set({
-                   source: { id: parentLabel },
+                   source: { id: subnetId },
                    target: { id: childLabel }
                });
               // link.connect(parentLabel, childLabel);
