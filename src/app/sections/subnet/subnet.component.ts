@@ -19,7 +19,6 @@ export class SubnetComponent implements OnInit {
 
   graph: any;
   subnetList: Array<Subnet>;
-  adjacencyList: any;
 
   constructor(private netinfoService: NetworkInfoService) {
      this.graph = new joint.dia.Graph;
@@ -27,7 +26,10 @@ export class SubnetComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.load();
+  }
 
+  load() {
     this.netinfoService.getSubnets().subscribe( data => {
         _.map(data, (entry:any) => {
             let sn: Subnet = new Subnet(entry.name, entry.id, entry.sysAdmin, entry.connections);
@@ -35,12 +37,14 @@ export class SubnetComponent implements OnInit {
         });
         console.log("Here are the subnets");
         console.log(this.subnetList);
-        this.adjacencyList = this.buildAdjacencyList(this.subnetList);
+        let alist = this.buildAdjacencyList(this.subnetList);
         console.log("Here is the resulting adjacencyList: ");
-        console.log(this.adjacencyList);
+        console.log(alist);
+        this.renderDirectedGraph(alist);
     });
+  }
 
-
+  renderDirectedGraph(adjacencyList:any): void {
     let paper = new joint.dia.Paper({
       el: $("#paper"),
       model: this.graph,
@@ -50,23 +54,9 @@ export class SubnetComponent implements OnInit {
       gridSize: 1
     });
 
-  //   this.buildSampleGraph();
-  let alist = {
-            a: ['b','c','d'],
-            b: ['d', 'e'],
-            c: [],
-            d: [],
-            e: ['e'],
-            f: [],
-            g: ['b','i'],
-            h: ['f'],
-            i: ['f','h']
-        };
-
-    let cells = this.buildGraphFromAdjacencyList(alist);
+    let cells = this.buildGraphFromAdjacencyList(adjacencyList);
     this.graph.resetCells(cells);
     joint.layout.DirectedGraph.layout(this.graph, {} );
-
   }
 
   /* Builds a dictionary representing an adjacencyList where the keys in the
