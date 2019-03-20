@@ -17,6 +17,8 @@ import { NetworkInfoService } from '../../services/network-info.service';
 })
 export class SubnetComponent implements OnInit {
 
+  drawerPosition = 'end';
+
   graph: any;
   subnetList: Array<Subnet>;
   subnetDict: any;
@@ -65,7 +67,7 @@ export class SubnetComponent implements OnInit {
       el: $("#paper"),
       model: this.graph,
       height: $("#diagram").height(),
-      width: $("#diagram").width(),
+      width:  $("#diagram").width(),
       // width: 300,
       gridSize: 1
     });

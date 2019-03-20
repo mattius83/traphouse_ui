@@ -5,6 +5,18 @@
   </h1>
 </div>
 
-<div id="diagram">
-    <div id="paper"></div>
-</div>
+<mat-drawer-container id="example-container" [hasBackdrop]="false">
+  <mat-drawer #drawer [position]='drawerPosition' [mode]="'side'">I'm a drawer</mat-drawer>
+  <mat-drawer-content>
+        <button mat-raised-button (click)="drawer.toggle()">Toggle drawer</button>
+        <!--
+        <div id="example-paper">Suppose this is some paper"</div>
+        -->
+
+        <div id="paper"></div>
+
+
+
+
+  </mat-drawer-content>
+</mat-drawer-container>
