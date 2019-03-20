@@ -6,7 +6,13 @@
 </div>
 
 <mat-drawer-container id="example-container" [hasBackdrop]="false">
-  <mat-drawer #drawer [position]='drawerPosition' [mode]="'side'">I'm a drawer</mat-drawer>
+
+  <mat-drawer #drawer  id="subnet-info-container" [position]='drawerPosition' [mode]="'side'">
+      <div>Subnet Name: Need to look up name </div>
+      <div>Subnet ID:   {{currentSubnet.id }} </div>
+      <div>System Admin:  Culio </div>
+
+  </mat-drawer>
   <mat-drawer-content>
         <button mat-raised-button (click)="drawer.toggle()">Toggle drawer</button>
         <!--

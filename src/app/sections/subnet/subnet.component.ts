@@ -18,7 +18,7 @@ import { NetworkInfoService } from '../../services/network-info.service';
 export class SubnetComponent implements OnInit {
 
   drawerPosition = 'end';
-
+  currentSubnet: any;
   graph: any;
   subnetList: Array<Subnet>;
   subnetDict: any;
@@ -27,6 +27,8 @@ export class SubnetComponent implements OnInit {
      this.graph = new joint.dia.Graph;
      this.subnetList = [];
      this.subnetDict = { };
+     this.currentSubnet = { };
+
   }
 
   ngOnInit() {
@@ -78,6 +80,8 @@ export class SubnetComponent implements OnInit {
       let currentElement = cellView.model;
       console.log("Here is the currentElement");
       console.log(currentElement);
+      this.currentSubnet.id = currentElement.id;
+
       currentElement.attr('body/stroke', 'orange');
     });
 
