@@ -1,14 +1,15 @@
-.example-container {
+#example-container {
   width: 100%;
   height: 600px;
   margin: 12px;
   border: 1px solid #555;
+  background-color: #e6f2ff;
 }
 
 #subnet-info-container {
    width: 250px;
-   height: 400px;
-   background-color: ivory;
+   height: 300px;
+   background-color: #e6f2ff;
 }
 
 #diagram {

@@ -78,10 +78,7 @@ export class SubnetComponent implements OnInit {
       this.resetAll(paper);
       let isElement = cellView.model.isElement();
       let currentElement = cellView.model;
-      console.log("Here is the currentElement");
-      console.log(currentElement);
-      this.currentSubnet.id = currentElement.id;
-
+      this.currentSubnet = this.subnetDict[currentElement.id];
       currentElement.attr('body/stroke', 'orange');
     });
 
@@ -158,6 +155,7 @@ export class SubnetComponent implements OnInit {
 
 
 
+  // TODO- remove this dead code
   buildSampleGraph() {
     let rect = new joint.shapes.basic.Rect({
       position: { x: 100, y: 30 },

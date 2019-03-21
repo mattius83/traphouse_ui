@@ -1,0 +1,17 @@
+
+<!--
+<div class="node-title">Displaying Properties for {{ node.type }}</div>
+<div class="node-property">Name: {{ node.name }} </div>
+<div class="node-property">ID:   {{ node.id }} </div>
+<div class="node-property">System Admin:  {{ node.sysAdmin }} </div>
+-->
+
+
+
+<table class="properties-table">
+	<tr><td class="property-label" align="left">ID</td><td class="property-value" align="right"> {{ node.id }}</td></tr>
+	<tr><td class="property-label" align="left">Name</td><td class="property-value" align="right"> {{ node.name }}</td></tr>
+	<tr><td class="property-label" align="left">System Admin</td><td class="property-value" align="right"> {{ node.sysAdmin }} </td></tr>
+	<tr><td class="property-label" align="left">Property x </td><td class="property-value" align="right">Text</td></tr>
+  <tr><td class="property-label" align="left">Property y </td><td class="property-value" align="right">Text</td></tr>
+</table>

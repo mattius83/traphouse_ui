@@ -12,6 +12,7 @@ import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 import { SubnetComponent } from './sections/subnet/subnet.component';
 import { OperatorsComponent } from './sections/operators/operators.component';
+import { NodeInfoComponent } from './sections/shared/node-info.component';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { OperatorsComponent } from './sections/operators/operators.component';
     HomeComponent,
     HeaderComponent,
     HeaderComponent,
+    NodeInfoComponent,
     SidenavListComponent,
     SubnetComponent,
     OperatorsComponent
