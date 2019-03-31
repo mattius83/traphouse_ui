@@ -19,4 +19,8 @@ export class NetworkInfoService {
        return this.http.get("../assets/test_data/subnets.json");
    }
 
+   public getNodes(): Observable<any> {
+       return this.http.get("../assets/test_data/nodes.json");
+   }
+
 }

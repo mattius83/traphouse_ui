@@ -11,7 +11,7 @@ import { RoutingModule } from './routing/routing.module';
 import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 import { SubnetComponent } from './sections/subnet/subnet.component';
-import { OperatorsComponent } from './sections/operators/operators.component';
+import { NetworkComponent } from './sections/network/network.component';
 import { NodeInfoComponent } from './sections/shared/node-info.component';
 
 
@@ -25,7 +25,7 @@ import { NodeInfoComponent } from './sections/shared/node-info.component';
     NodeInfoComponent,
     SidenavListComponent,
     SubnetComponent,
-    OperatorsComponent
+    NetworkComponent
   ],
   imports: [
     BrowserModule,

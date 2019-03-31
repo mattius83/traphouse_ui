@@ -199,7 +199,7 @@
   },
   { "subnetId": "p210",
     "id": "30",
-    "name": "Viccor Router",
+    "name": "VR-210",
     "manufacturer":  "Dell",
     "model": "Viccor 7800",
     "os": "Windows 7",
@@ -208,7 +208,7 @@
   },
   { "subnetId": "p210",
     "id": "31",
-    "name": "Viccor Router Beta",
+    "name": "VR-340",
     "manufacturer":  "Dell",
     "model": "Viccor 7800",
     "os": "Windows 7",
@@ -296,15 +296,94 @@
     "type": "desktop",
     "connections": ["54","53","51","52"]
   },
+  { "subnetId": "m005",
+    "id": "54",
+    "name": "Benito Tollafaria",
+    "manufacturer":  "Dell",
+    "model": "Lattitude xt650",
+    "os": "Windows 10",
+    "type": "desktop",
+    "connections": ["53","79"]
+  },
+  { "subnetId": "m005",
+    "id": "53",
+    "name": "Candis Teetree",
+    "manufacturer":  "Dell",
+    "model": "Lattitude xt500",
+    "os": "Windows 7",
+    "type": "desktop",
+    "connections": ["54","51","79"]
+  },
+  { "subnetId": "m005",
+    "id": "51",
+    "name": "Holly Gandolpha",
+    "manufacturer":  "Dell",
+    "model": "Lattitude 7200 Apex",
+    "os": "Windows 10",
+    "type": "desktop",
+    "connections": ["52","53","79"]
+  },
+  { "subnetId": "m005",
+    "id": "52",
+    "name": "Hilgard Valvatta",
+    "manufacturer":  "Dell",
+    "model": "Concierge 4329",
+    "os": "Windows 10",
+    "type": "desktop",
+    "connections": ["56","51","79", "55"]
+  },
+  { "subnetId": "m005",
+    "id": "56",
+    "name": "John Smith",
+    "manufacturer":  "Dell",
+    "model": "Lattitude 6800",
+    "os": "Windows 7",
+    "type": "desktop",
+    "connections": ["52", "55","58", "57", "59"]
+  },
+  { "subnetId": "m005",
+    "id": "58",
+    "name": "Natalia Hempson",
+    "manufacturer":  "Dell",
+    "model": "Concierge 4300",
+    "os": "Windows 7",
+    "type": "desktop",
+    "connections": ["57", "56"]
+  },
+  { "subnetId": "m005",
+    "id": "57",
+    "name": "Glenn Renalds",
+    "manufacturer":  "Dell",
+    "model": "Concierge 4300",
+    "os": "Windows 7",
+    "type": "desktop",
+    "connections": ["55", "56","58"]
+  },
+  { "subnetId": "m005",
+    "id": "55",
+    "name": "Kathy Bates",
+    "manufacturer":  "Dell",
+    "model": "Concierge 4300",
+    "os": "Windows 10",
+    "type": "desktop",
+    "connections": ["52", "56","57", "59", "60"]
+  },
+  { "subnetId": "m005",
+    "id": "59",
+    "name": "Qinton Valero",
+    "manufacturer":  "Dell",
+    "model": "Concierge 4200",
+    "os": "Windows 10",
+    "type": "desktop",
+    "connections": ["56", "55","60"]
+  },
+  { "subnetId": "m005",
+    "id": "60",
+    "name": "Martin Chappita",
+    "manufacturer":  "Dell",
+    "model": "Concierge 4200",
+    "os": "Windows 10",
+    "type": "desktop",
+    "connections": ["55", "59"]
+  }
 ]
-
-
-
-subnetId: string;
- id: string;
- name: string;
-manufacturer: string;
-model: string;
-os: string;
-type: string;
-connections: Array<string>;

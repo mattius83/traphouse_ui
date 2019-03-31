@@ -3,12 +3,12 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from '../home/home.component';
 import { SubnetComponent } from '../sections/subnet/subnet.component';
-import { OperatorsComponent } from '../sections/operators/operators.component';
+import { NetworkComponent } from '../sections/network/network.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'subnet', component: SubnetComponent },
-  { path: 'operators', component: OperatorsComponent },
+  { path: 'network', component: NetworkComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
 

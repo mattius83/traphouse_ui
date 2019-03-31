@@ -1,0 +1,23 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to Network Nodes
+  </h1>
+</div>
+
+<mat-drawer-container id="example-container" [hasBackdrop]="false">
+
+  <mat-drawer #drawer  id="node-info-container" [position]='drawerPosition' [mode]="'side'">
+      <node-info [node]="currentNode"></node-info>
+  </mat-drawer>
+
+  <mat-drawer-content>
+        <button mat-raised-button (click)="drawer.toggle()">Toggle drawer</button>
+        <!--
+        <div id="example-paper">Suppose this is some paper"</div>
+        -->
+
+        <div id="paper"></div>
+
+  </mat-drawer-content>
+</mat-drawer-container>

@@ -3,8 +3,8 @@ declare var $:JQueryStatic;
 import * as _ from 'lodash';
 import * as backbone from 'backbone';
 import * as joint from 'jointjs';
-import { Shape } from './shape';
-import { Link } from './link';
+import { Shape } from '../shared/shape';
+import { Link } from '../shared/link';
 import { Subnet } from './subnet';
 import { NetworkInfoService } from '../../services/network-info.service';
 

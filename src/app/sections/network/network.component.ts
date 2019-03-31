@@ -3,9 +3,9 @@ declare var $:JQueryStatic;
 import * as _ from 'lodash';
 import * as backbone from 'backbone';
 import * as joint from 'jointjs';
-import { Shape } from './shape';
-import { Link } from './link';
-// import { Subnet } from './subnet';
+import { Shape } from '../shared/shape';
+import { Node } from './node';
+import { Link } from '../shared/link';
 import { NetworkInfoService } from '../../services/network-info.service';
 
 
@@ -18,7 +18,7 @@ import { NetworkInfoService } from '../../services/network-info.service';
 export class NetworkComponent implements OnInit {
 
   drawerPosition = 'end';
-  currentNetwork: any;
+  currentNode: any;
   graph: any;
   networkNodeList: Array<Node>;
   networkNodeDict: any;
@@ -27,6 +27,7 @@ export class NetworkComponent implements OnInit {
      this.graph = new joint.dia.Graph;
      this.networkNodeList = [];
      this.networkNodeDict = { };
+     this.currentNode = { };
   }
 
   ngOnInit() {
@@ -34,31 +35,46 @@ export class NetworkComponent implements OnInit {
   }
 
   load() {
-    this.netinfoService.getSubnets().subscribe( data => {
-        _.map(data, (entry:any) => {
-            let sn: Subnet = new Subnet(entry.name, entry.id, entry.sysAdmin, entry.connections);
-            this.subnetList.push(sn);
-        });
-        this.buildSubnetDictionary(this.subnetList);
-        /*
-        console.log("Here are the subnets");
-        console.log(this.subnetList);
-        console.log("Here is the subnet dictionary: ");
-        console.log(this.subnetDict);
-        */
+    this.netinfoService.getNodes().subscribe( data => {
 
-        let alist = this.buildAdjacencyList(this.subnetList);
-        /*
+
+        _.map(data, (entry:any) => {
+            // for now... only load up nodes for one subnet - Philadelphia "p210"
+            if ( entry.subnetId === "p210") {
+              let node: Node = new Node(entry.name, entry.id);
+              node.subnetId = entry.subnetId;
+              node.manufacturer = entry.manufacturer;
+              node.model = entry.model;
+              node.os = entry.os;
+              node.type = entry.type;
+              node.connections = entry.connections;
+              this.networkNodeList.push(node);
+            }
+
+        });
+        console.log("Inside load - subscribe and here is the networkNodeList");
+        console.log(this.networkNodeList);
+
+        this.buildNetworkNodeDictionary(this.networkNodeList);
+
+        console.log("Here are the subnets");
+        console.log(this.networkNodeList);
+        console.log("Here is the subnet dictionary: ");
+        console.log(this.networkNodeDict);
+
+
+        let alist = this.buildAdjacencyList(this.networkNodeList);
+
         console.log("Here is the resulting adjacencyList: ");
         console.log(alist);
-        */
+
         this.renderDirectedGraph(alist);
     });
   }
 
-  buildSubnetDictionary(subnets: Array<Subnet>): void {
-      _.map(subnets, (entry: Subnet) => {
-        this.subnetDict[entry.id] = entry;
+  buildNetworkNodeDictionary(nodes: Array<Node>): void {
+      _.map(nodes, (entry: Node) => {
+        this.networkNodeDict[entry.id] = entry;
       });
   }
 
@@ -76,7 +92,7 @@ export class NetworkComponent implements OnInit {
       this.resetAll(paper);
       let isElement = cellView.model.isElement();
       let currentElement = cellView.model;
-      this.currentSubnet = this.subnetDict[currentElement.id];
+      this.currentNode = this.networkNodeDict[currentElement.id];
       currentElement.attr('body/stroke', 'orange');
     });
 
@@ -107,12 +123,12 @@ export class NetworkComponent implements OnInit {
   }
 
   /* Builds a dictionary representing an adjacencyList where the keys in the
-   * dictionary are the IDs from the subnets
+   * dictionary are the IDs from the nodes
    */
-  buildAdjacencyList(subnetList: Array<Subnet>):any {
+  buildAdjacencyList(nodeList: Array<Node>):any {
       let result:any = { };
 
-      _.map(subnetList, (entry:Subnet) => {
+      _.map(nodeList, (entry:Node) => {
           result[entry.id] = [];
           _.map(entry.connections, connectedId => {
               result[entry.id].push(connectedId);
@@ -126,18 +142,18 @@ export class NetworkComponent implements OnInit {
        var elements = [];
        var links = [];
 
-       Object.keys(adjacencyList).forEach(subnetId =>  {
+       Object.keys(adjacencyList).forEach(nodeId =>  {
            // Add element
-           let elem = new Shape({id: subnetId});
-           let currentSubnet = this.subnetDict[subnetId];
-           elem.attr('label/text', currentSubnet.name);
+           let elem = new Shape({id: nodeId});
+           let currentNode = this.networkNodeDict[nodeId];
+           elem.attr('label/text', currentNode.name);
            elements.push(elem);
 
            // Add links
-           adjacencyList[subnetId].forEach(function(childLabel) {
+           adjacencyList[nodeId].forEach(function(childLabel) {
                let link = new Link();
                link.set({
-                   source: { id: subnetId },
+                   source: { id: nodeId },
                    target: { id: childLabel }
                });
               // link.connect(parentLabel, childLabel);
