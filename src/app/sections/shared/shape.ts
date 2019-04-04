@@ -6,7 +6,7 @@
 var Shape = joint.dia.Element.define('demo.Shape', {
         size: {
             width: 100,
-            height: 50
+            height: 35
         },
         attrs: {
             body: {
@@ -23,7 +23,7 @@ var Shape = joint.dia.Element.define('demo.Shape', {
                 refY: '50%',
                 yAlignment: 'middle',
                 xAlignment: 'middle',
-                fontSize: 15
+                fontSize: 13
             }
         }
     }, {

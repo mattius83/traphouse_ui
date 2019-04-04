@@ -97,8 +97,20 @@ export class NetworkComponent implements OnInit {
     });
 
     let cells = this.buildGraphFromAdjacencyList(adjacencyList);
+    let graphOptions = { rankSep: 3, nodeSep: 5, edgeSep: 3};
+    /*
+    let graphOptions = {
+      "nodeSep": 20,
+      "edgeSep": 30,
+      "rankSep": 20,
+      "rankDir": “TB”,
+      "marginX": 10,
+      "marginY": 10
+    };
+    */
     this.graph.resetCells(cells);
-    joint.layout.DirectedGraph.layout(this.graph, {} );
+
+    joint.layout.DirectedGraph.layout(this.graph, graphOptions );
   }
 
   resetAll(paper) {
