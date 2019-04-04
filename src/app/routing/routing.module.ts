@@ -7,8 +7,8 @@ import { NetworkComponent } from '../sections/network/network.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'subnet', component: SubnetComponent },
-  { path: 'network', component: NetworkComponent },
+  { path: 'subnets', component: SubnetComponent },
+  { path: 'nodes', component: NetworkComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
 
