@@ -1,7 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
-    Nodes for Subnet:  ______________________
+    Nodes for Subnet:  ____Mattius__________________
   </h1>
 </div>
 
@@ -11,13 +11,26 @@
       <node-info [node]="currentNode"></node-info>
   </mat-drawer>
 
+
   <mat-drawer-content>
-        <button mat-raised-button (click)="drawer.toggle()">Toggle drawer</button>
-        <!--
-        <div id="example-paper">Suppose this is some paper"</div>
-        -->
+        <div id="diagram-container">
+          <!--
+          <button mat-raised-button (click)="drawer.toggle()">Toggle drawer</button>
 
-        <div id="paper"></div>
-
+          -->
+          <div id="paper"></div>
+          <div class="pull-out-bar">
+        		  <div id="pull-out-icon" (click)="drawer.toggle(); nodeInfoOpen = !nodeInfoOpen">
+                  <i *ngIf="nodeInfoOpen"  class="fa fa-lg fa-forward"  aria-hidden="true"></i>
+        				  <i *ngIf="!nodeInfoOpen" class="fa fa-lg fa-backward" aria-hidden="true"></i>
+        			</div>
+        	</div>
+          <!--
+          <node-info class="node-info-open" [node]="currentNode"></node-info>
+          -->
+        </div>
   </mat-drawer-content>
+
+
+
 </mat-drawer-container>

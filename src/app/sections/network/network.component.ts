@@ -22,16 +22,22 @@ export class NetworkComponent implements OnInit {
   graph: any;
   networkNodeList: Array<Node>;
   networkNodeDict: any;
+  nodeInfoOpen: boolean;
 
   constructor(private netinfoService: NetworkInfoService) {
      this.graph = new joint.dia.Graph;
      this.networkNodeList = [];
      this.networkNodeDict = { };
      this.currentNode = { };
+     this.nodeInfoOpen = false;
   }
 
   ngOnInit() {
     this.load();
+  }
+
+  onShowNodeInfo() {
+
   }
 
   load() {
