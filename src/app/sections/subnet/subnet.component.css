@@ -5,10 +5,12 @@
   background-color: #e6f2ff;
 }
 
-#subnet-info-container {
+
+
+#node-info-container {
    width: 250px;
    height: 100%;
-   background-color: #e6f2ff;
+   background-color: #9dafc7;
 }
 
 #diagram {
@@ -18,6 +20,24 @@
     overflow-y: auto;
     overflow-x: auto;
     background-color: #e6f2ff;
+}
+
+#diagram-container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 30px;
+    align-content: center;
+}
+
+.pull-out-bar {
+  height: 100%;
+  width: 30px;
+  background-color: gray;
+}
+
+#pull-out-icon {
+  margin-top: 200px;
 }
 
 #example-paper {

@@ -7,7 +7,7 @@
 
 <mat-drawer-container id="example-container" [hasBackdrop]="false">
 
-  <mat-drawer #drawer  id="subnet-info-container" [position]='drawerPosition' [mode]="'side'">
+  <mat-drawer #drawer  id="node-info-container" [position]='drawerPosition' [mode]="'side'">
 
       <!-- TODO - pull out the display of the panel and make this its own component -->
       <!--
@@ -19,15 +19,21 @@
 
   </mat-drawer>
   <mat-drawer-content>
-        <button mat-raised-button (click)="drawer.toggle()">Toggle drawer</button>
-        <!--
-        <div id="example-paper">Suppose this is some paper"</div>
-        -->
+        <div id="diagram-container">
+          <!--
+          <button mat-raised-button (click)="drawer.toggle()">Toggle drawer</button>
 
-        <div id="paper"></div>
-
-
-
-
+          -->
+          <div id="paper"></div>
+          <div class="pull-out-bar">
+              <div id="pull-out-icon" (click)="drawer.toggle(); nodeInfoOpen = !nodeInfoOpen">
+                  <i *ngIf="nodeInfoOpen"  class="fa fa-lg fa-forward"  aria-hidden="true"></i>
+                  <i *ngIf="!nodeInfoOpen" class="fa fa-lg fa-backward" aria-hidden="true"></i>
+              </div>
+          </div>
+          <!--
+          <node-info class="node-info-open" [node]="currentNode"></node-info>
+          -->
+        </div>
   </mat-drawer-content>
 </mat-drawer-container>

@@ -22,12 +22,14 @@ export class SubnetComponent implements OnInit {
   graph: any;
   subnetList: Array<Subnet>;
   subnetDict: any;
+  nodeInfoOpen: boolean;
 
   constructor(private netinfoService: NetworkInfoService) {
      this.graph = new joint.dia.Graph;
      this.subnetList = [];
      this.subnetDict = { };
      this.currentSubnet = { };
+     this.nodeInfoOpen = false;
 
   }
 
