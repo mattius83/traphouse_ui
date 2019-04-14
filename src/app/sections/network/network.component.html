@@ -1,10 +1,19 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
-    Nodes for Subnet:  ____Mattius__________________
+    Subnet Selection
   </h1>
 </div>
-
+<div>
+  <mat-form-field>
+    <mat-label>Choose a Subnet</mat-label>
+    <mat-select>
+      <mat-option [value]="234">Dallas</mat-option>
+      <mat-option [value]="123">Philadelphia</mat-option>
+      <mat-option [value]="789">Memphis</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
 <mat-drawer-container id="example-container" [hasBackdrop]="false">
 
   <mat-drawer #drawer  id="node-info-container" [position]='drawerPosition' [mode]="'side'">
@@ -14,10 +23,6 @@
 
   <mat-drawer-content>
         <div id="diagram-container">
-          <!--
-          <button mat-raised-button (click)="drawer.toggle()">Toggle drawer</button>
-
-          -->
           <div id="paper"></div>
           <div class="pull-out-bar">
         		  <div id="pull-out-icon" (click)="drawer.toggle(); nodeInfoOpen = !nodeInfoOpen">

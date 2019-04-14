@@ -8,15 +8,7 @@
 <mat-drawer-container id="example-container" [hasBackdrop]="false">
 
   <mat-drawer #drawer  id="node-info-container" [position]='drawerPosition' [mode]="'side'">
-
-      <!-- TODO - pull out the display of the panel and make this its own component -->
-      <!--
-      <div>Subnet Name: {{ currentSubnet.name }} </div>
-      <div>Subnet ID:   {{ currentSubnet.id }} </div>
-      <div>System Admin:  {{ currentSubnet.sysAdmin }} </div>
-      -->
       <node-info [node]="currentSubnet"></node-info>
-
   </mat-drawer>
   <mat-drawer-content>
         <div id="diagram-container">
