@@ -1,13 +1,14 @@
 <div class="grid-container">
   <div></div>
   <div id=subnet-selection>
-  	 <select>
-      <option value="Dallas">Dallas</option>
-      <option value="Philadelphia">Philadelphia</option>
-      <option value="Memphis">Memphis</option>
-      <option value="Cleveland">Cleveland</option>
-	   </select>
-
+    <mat-form-field>
+      <mat-label>Choose a Subnet</mat-label>
+      <mat-select>
+        <mat-option [value]="234">Dallas</mat-option>
+        <mat-option [value]="123">Philadelphia</mat-option>
+        <mat-option [value]="789">Memphis</mat-option>
+      </mat-select>
+    </mat-form-field>
   </div>
 
   <div>3</div>
