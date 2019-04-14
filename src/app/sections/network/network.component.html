@@ -1,4 +1,53 @@
-<!--The content below is only a placeholder and can be replaced.-->
+<div class="grid-container">
+  <div></div>
+  <div id=subnet-selection>
+  	 <select>
+      <option value="Dallas">Dallas</option>
+      <option value="Philadelphia">Philadelphia</option>
+      <option value="Memphis">Memphis</option>
+      <option value="Cleveland">Cleveland</option>
+	   </select>
+
+  </div>
+
+  <div>3</div>
+  <div class="paper-row"></div>
+
+
+
+
+
+
+  <!-- this is the diagram, and would be the material drawer content -->
+  <mat-drawer-container id="drawer-container" [hasBackdrop]="false">
+    <mat-drawer #drawer  id="node-info-container" [position]='drawerPosition' [mode]="'side'">
+        <node-info [node]="currentNode"></node-info>
+    </mat-drawer>
+
+    <mat-drawer-content>
+          <div id="diagram-container">
+            <div id="paper"></div>
+            <div class="pull-out-bar">
+          		  <div id="pull-out-icon" (click)="drawer.toggle(); nodeInfoOpen = !nodeInfoOpen">
+                    <i *ngIf="nodeInfoOpen"  class="fa fa-lg fa-forward"  aria-hidden="true"></i>
+          				  <i *ngIf="!nodeInfoOpen" class="fa fa-lg fa-backward" aria-hidden="true"></i>
+          			</div>
+          	</div>
+          </div>
+    </mat-drawer-content>
+
+  </mat-drawer-container>
+
+
+  <div class="paper-row"></div>
+  <div></div>
+  <div></div>
+  <div></div>
+
+</div>
+
+
+<!--
 <div style="text-align:center">
   <h1>
     Subnet Selection
@@ -14,7 +63,7 @@
     </mat-select>
   </mat-form-field>
 </div>
-<mat-drawer-container id="example-container" [hasBackdrop]="false">
+<mat-drawer-container id="drawer-container" [hasBackdrop]="false">
 
   <mat-drawer #drawer  id="node-info-container" [position]='drawerPosition' [mode]="'side'">
       <node-info [node]="currentNode"></node-info>
@@ -30,12 +79,10 @@
         				  <i *ngIf="!nodeInfoOpen" class="fa fa-lg fa-backward" aria-hidden="true"></i>
         			</div>
         	</div>
-          <!--
-          <node-info class="node-info-open" [node]="currentNode"></node-info>
-          -->
         </div>
   </mat-drawer-content>
 
 
 
 </mat-drawer-container>
+-->
