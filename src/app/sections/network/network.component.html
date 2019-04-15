@@ -1,27 +1,38 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Subnet Selection
-  </h1>
-</div>
+<div class="grid-container">
+  <div></div>
+  <div id=subnet-selection>
+    <mat-form-field>
+      <mat-label>Choose a Subnet</mat-label>
+      <mat-select>
+        <mat-option [value]="234">Dallas</mat-option>
+        <mat-option [value]="123">Philadelphia</mat-option>
+        <mat-option [value]="789">Memphis</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
 
-<div id="diagram-container">
-    <div>
-      <mat-form-field>
-        <mat-label>Choose a Subnet</mat-label>
-        <mat-select>
-          <mat-option [value]="234">Dallas</mat-option>
-          <mat-option [value]="123">Philadelphia</mat-option>
-          <mat-option [value]="789">Memphis</mat-option>
-        </mat-select>
-      </mat-form-field>
-    </div>
-    <mat-drawer-container id="example-container" [hasBackdrop]="false">
+  <div></div>
+  <div class="paper-row"></div>
 
-      <mat-drawer #drawer  id="node-info-container" [position]='drawerPosition' [mode]="'side'">
-          <node-info [node]="currentNode"></node-info>
-      </mat-drawer>
+  <!-- this is the diagram, and would be the material drawer content -->
+  <mat-drawer-container id="drawer-container" [hasBackdrop]="false">
+    <mat-drawer #drawer  id="node-info-container" [position]='drawerPosition' [mode]="'side'">
+        <node-info [node]="currentNode"></node-info>
+    </mat-drawer>
 
+    <mat-drawer-content>
+          <div id="diagram-container">
+            <div id="paper"></div>
+            <div class="pull-out-bar">
+          		  <div id="pull-out-icon" (click)="drawer.toggle(); nodeInfoOpen = !nodeInfoOpen">
+                    <i *ngIf="nodeInfoOpen"  class="fa fa-lg fa-forward"  aria-hidden="true"></i>
+          				  <i *ngIf="!nodeInfoOpen" class="fa fa-lg fa-backward" aria-hidden="true"></i>
+          			</div>
+          	</div>
+          </div>
+    </mat-drawer-content>
+
+  </mat-drawer-container>
 
       <mat-drawer-content>
             <div id="paper-container">
@@ -33,7 +44,9 @@
             			</div>
             	</div>
 
-            </div>
-      </mat-drawer-content>
-    </mat-drawer-container>
-<div>  <!-- end diagram container -->
+  <div class="paper-row"></div>
+  <div></div>
+  <div></div>
+  <div></div>
+
+</div>

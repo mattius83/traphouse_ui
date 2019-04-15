@@ -5,27 +5,38 @@
   </h1>
 </div>
 
-<mat-drawer-container id="example-container" [hasBackdrop]="false">
 
-  <mat-drawer #drawer  id="node-info-container" [position]='drawerPosition' [mode]="'side'">
-      <node-info [node]="currentSubnet"></node-info>
-  </mat-drawer>
-  <mat-drawer-content>
-        <div id="diagram-container">
-          <!--
-          <button mat-raised-button (click)="drawer.toggle()">Toggle drawer</button>
+<div class="grid-container">
+  <div></div>
+  <div></div>
+  <div></div>
 
-          -->
-          <div id="paper"></div>
-          <div class="pull-out-bar">
-              <div id="pull-out-icon" (click)="drawer.toggle(); nodeInfoOpen = !nodeInfoOpen">
-                  <i *ngIf="nodeInfoOpen"  class="fa fa-lg fa-forward"  aria-hidden="true"></i>
-                  <i *ngIf="!nodeInfoOpen" class="fa fa-lg fa-backward" aria-hidden="true"></i>
-              </div>
+  <div class="paper-row"></div>
+
+  <!-- this is the diagram, and would be the material drawer content -->
+  <mat-drawer-container id="drawer-container" [hasBackdrop]="false">
+    <mat-drawer #drawer  id="node-info-container" [position]='drawerPosition' [mode]="'side'">
+        <node-info [node]="currentSubnet"></node-info>
+    </mat-drawer>
+
+    <mat-drawer-content>
+          <div id="diagram-container">
+            <div id="paper"></div>
+            <div class="pull-out-bar">
+          		  <div id="pull-out-icon" (click)="drawer.toggle(); nodeInfoOpen = !nodeInfoOpen">
+                    <i *ngIf="nodeInfoOpen"  class="fa fa-lg fa-forward"  aria-hidden="true"></i>
+          				  <i *ngIf="!nodeInfoOpen" class="fa fa-lg fa-backward" aria-hidden="true"></i>
+          			</div>
+          	</div>
           </div>
-          <!--
-          <node-info class="node-info-open" [node]="currentNode"></node-info>
-          -->
-        </div>
-  </mat-drawer-content>
-</mat-drawer-container>
+    </mat-drawer-content>
+
+  </mat-drawer-container>
+
+
+  <div class="paper-row"></div>
+  <div></div>
+  <div></div>
+  <div></div>
+
+</div>
