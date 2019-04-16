@@ -1,16 +1,19 @@
-export class Node {
 
-    name: string;
-    id: string;
+export class Node {
     subnetId: string;
+    id: string;
+    currentUserName: string;
     manufacturer: string;
     model: string;
-    os: string;
+    osType: string;
     type: string;
+    macAddress: string;
+    ipAddress: string;
+    networkType: string;
     connections: Array<string>;
 
     constructor(name, id) {
-        this.name = name;
+        this.currentUserName = name;
         this.id = id;
      }
 

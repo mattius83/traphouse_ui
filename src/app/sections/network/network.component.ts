@@ -45,14 +45,18 @@ export class NetworkComponent implements OnInit {
 
 
         _.map(data, (entry:any) => {
+
             // for now... only load up nodes for one subnet - Philadelphia "p210"
             if ( entry.subnetId === "p210") {
-              let node: Node = new Node(entry.name, entry.id);
+              let node: Node = new Node(entry.currentUserName, entry.id);
               node.subnetId = entry.subnetId;
               node.manufacturer = entry.manufacturer;
               node.model = entry.model;
-              node.os = entry.os;
+              node.osType = entry.osType;
               node.type = entry.type;
+              node.macAddress = entry.macAddress;
+              node.ipAddress = entry.ipAddress;
+              node.networkType = entry.networkType;
               node.connections = entry.connections;
               this.networkNodeList.push(node);
             }
@@ -164,7 +168,7 @@ export class NetworkComponent implements OnInit {
            // Add element
            let elem = new Shape({id: nodeId});
            let currentNode = this.networkNodeDict[nodeId];
-           elem.attr('label/text', currentNode.name);
+           elem.attr('label/text', currentNode.currentUserName);
            elements.push(elem);
 
            // Add links
