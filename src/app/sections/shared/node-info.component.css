@@ -16,8 +16,9 @@
 
 
 .properties-table{
-		width:100%;
+		width:90%;
 		border-collapse:collapse;
+    font-size: 11pt;
 }
 
 .properties-table td{

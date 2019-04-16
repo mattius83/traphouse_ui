@@ -2,6 +2,7 @@
 export class Node {
     subnetId: string;
     id: string;
+    deviceName: string;
     currentUserName: string;
     manufacturer: string;
     model: string;

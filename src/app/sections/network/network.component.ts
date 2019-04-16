@@ -50,6 +50,7 @@ export class NetworkComponent implements OnInit {
             if ( entry.subnetId === "p210") {
               let node: Node = new Node(entry.currentUserName, entry.id);
               node.subnetId = entry.subnetId;
+              node.deviceName = entry.deviceName;
               node.manufacturer = entry.manufacturer;
               node.model = entry.model;
               node.osType = entry.osType;
