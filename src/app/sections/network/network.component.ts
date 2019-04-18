@@ -85,8 +85,6 @@ export class NetworkComponent implements OnInit {
                 this.adjacencyDictionary[subnetId] = alist;
             });
 
-            let selectedSubnetId = Object.keys(this.adjacencyDictionary)[0];
-
         });
     });
 
