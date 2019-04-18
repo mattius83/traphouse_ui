@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { RoutingModule } from './routing/routing.module';
 import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
+import { NotificationsComponent } from './sections/notifications/notifications.component';
 import { SubnetComponent } from './sections/subnet/subnet.component';
 import { NetworkComponent } from './sections/network/network.component';
 import { NodeInfoComponent } from './sections/shared/node-info.component';
@@ -25,7 +26,8 @@ import { NodeInfoComponent } from './sections/shared/node-info.component';
     NodeInfoComponent,
     SidenavListComponent,
     SubnetComponent,
-    NetworkComponent
+    NetworkComponent,
+    NotificationsComponent
   ],
   imports: [
     BrowserModule,

@@ -4,11 +4,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from '../home/home.component';
 import { SubnetComponent } from '../sections/subnet/subnet.component';
 import { NetworkComponent } from '../sections/network/network.component';
+import { NotificationsComponent } from '../sections/notifications/notifications.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'subnets', component: SubnetComponent },
   { path: 'nodes', component: NetworkComponent },
+  { path: 'notifications', component: NotificationsComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
 
