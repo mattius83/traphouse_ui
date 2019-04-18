@@ -1,14 +1,14 @@
 <div class="grid-container">
   <div></div>
   <div id=subnet-selection>
+
     <mat-form-field>
-      <mat-label>Choose a Subnet</mat-label>
-      <mat-select>
-        <mat-option [value]="234">Dallas</mat-option>
-        <mat-option [value]="123">Philadelphia</mat-option>
-        <mat-option [value]="789">Memphis</mat-option>
+      <mat-label >Select an option</mat-label>
+      <mat-select  (selectionChange)="onSubnetSelected($event)" [(value)]="selectedSubnet">
+        <mat-option *ngFor="let subnet of selectedSubnetList" [value]="subnet.value">{{subnet.displayValue}}</mat-option>
       </mat-select>
     </mat-form-field>
+
   </div>
 
   <div></div>
