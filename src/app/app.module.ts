@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { AgGridModule } from 'ag-grid-angular';
 import { AppComponent } from './app.component';
 import { LayoutComponent } from './layout/layout.component';
 import { HomeComponent } from './home/home.component';
@@ -14,6 +15,7 @@ import { NotificationsComponent } from './sections/notifications/notifications.c
 import { SubnetComponent } from './sections/subnet/subnet.component';
 import { NetworkComponent } from './sections/network/network.component';
 import { NodeInfoComponent } from './sections/shared/node-info.component';
+
 
 
 @NgModule({
@@ -30,6 +32,7 @@ import { NodeInfoComponent } from './sections/shared/node-info.component';
     NotificationsComponent
   ],
   imports: [
+    AgGridModule.withComponents([]),
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
