@@ -1,0 +1,42 @@
+<h1>This is notifications - a work in process </h1>
+<div class="grid-container">
+
+
+  <div id=decoy-node-container>
+    <ag-grid-angular class=" ag-theme-material decoy-node-grid"
+      [rowData]="rowData"
+      [columnDefs]="columnDefs">
+    </ag-grid-angular>
+  </div>
+  <div id="notification-user-list-container">
+        <mat-card class="example-card">
+          <mat-card-header>
+            <mat-card-title>Notification List</mat-card-title>
+            <mat-card-subtitle>Select individuals to be notified on decoy activity</mat-card-subtitle>
+          </mat-card-header>
+
+          <mat-card-content>
+              <div id="user-notification-list">
+                <mat-selection-list #users>
+                    <mat-list-option role="listitem">Philip Donnely</mat-list-option>
+                    <mat-list-option role="listitem">Lucinda Jackson</mat-list-option>
+                    <mat-list-option role="listitem">Nappy Ronaldo</mat-list-option>
+                    <mat-list-option role="listitem">Philip Donnely</mat-list-option>
+                    <mat-list-option role="listitem">Lucinda Jackson</mat-list-option>
+                    <mat-list-option role="listitem">Nappy Ronaldo</mat-list-option>
+                    <mat-list-option role="listitem">Philip Donnely</mat-list-option>
+                    <mat-list-option role="listitem">Lucinda Jackson</mat-list-option>
+                    <mat-list-option role="listitem">Nappy Ronaldo</mat-list-option>
+                </mat-selection-list>
+              </div>
+          </mat-card-content>
+
+          <mat-card-actions>
+            <button mat-button>Add</button>
+            <button mat-button>Remove</button>
+            <button mat-button>Edit</button>
+          </mat-card-actions>
+    </mat-card>
+  </div>
+
+</div>

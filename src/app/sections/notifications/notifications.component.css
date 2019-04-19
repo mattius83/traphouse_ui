@@ -1,0 +1,26 @@
+
+::ng-deep.mat-pseudo-checkbox{
+  display: none !important;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 500px auto;
+  grid-column-gap: 20px;
+}
+
+.decoy-node-grid {
+  height: 500px;
+  width: 500px;
+}
+
+#notification-user-list-container {
+  max-height: 500px;
+  width: 100%;
+}
+
+#user-notification-list{
+  height: 350px;
+  width: 100%;
+  overflow-y:auto;
+}
