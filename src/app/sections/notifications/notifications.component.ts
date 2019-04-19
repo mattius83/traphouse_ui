@@ -1,5 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 import * as _ from 'lodash';
+import { ContactDialogComponent } from './contact-dialog.component';
+import { NetworkInfoService } from '../../services/network-info.service';
+import { Node } from '../network/node';
 
 @Component({
   selector: 'notifications',
@@ -10,23 +14,35 @@ export class NotificationsComponent implements OnInit {
 
   columnDefs:any;
   rowData:any;
-  
-  constructor() {
+
+  constructor(private netInfoService: NetworkInfoService,
+              public dialog: MatDialog) {
+    this.rowData = [];
   }
 
   ngOnInit() {
 
     this.columnDefs = [
-      {headerName: 'Make', field: 'make' },
-      {headerName: 'Model', field: 'model' },
-      {headerName: 'Price', field: 'price'}
+      {headerName: 'SN_ID', field: 'subnetId', width: 150 },
+      {headerName: 'Device Name', field: 'deviceName', maxWidth: 200 },
+      {headerName: 'IP Addr', field: 'ipAddress', width: 150 },
+      {headerName: 'OS', field: 'osType', width: 200 },
+      {headerName: 'Mac Addr', field: 'macAddress', width: 150 }
     ];
+    this.load();
+  }
 
-    this.rowData = [
-        { make: 'Toyota', model: 'Celica', price: 35000 },
-        { make: 'Ford', model: 'Mondeo', price: 32000 },
-        { make: 'Porsche', model: 'Boxter', price: 72000 }
-    ];
+  load() {
+    this.netInfoService.getNodes().subscribe( nodesData => {
+        let decoyNodes = _.filter(nodesData, (entry:Node) => {
+            return (entry.networkType == 'DECOY');
+        });
+        this.rowData = decoyNodes;
+    });
+  }
+
+  onEdit() {
+      const dialogRef = this.dialog.open(ContactDialogComponent, { width: '400px', height: '400px'});
   }
 
 }

@@ -2,10 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatTabsModule, MatCardModule, MatSidenavModule, MatToolbarModule, MatIconModule, MatButtonModule,
          MatListModule, MatMenuModule, MatInputModule, MatPaginatorModule, MatProgressSpinnerModule,
-         MatSortModule, MatTableModule, MatSelectModule, MatFormFieldModule } from '@angular/material';
+         MatSortModule, MatTableModule, MatSelectModule, MatFormFieldModule, MatDialogModule } from '@angular/material';
 
 @NgModule({
   imports: [
+    MatDialogModule,
     MatMenuModule,
     MatListModule,
     MatButtonModule,
@@ -20,6 +21,7 @@ import { MatTabsModule, MatCardModule, MatSidenavModule, MatToolbarModule, MatIc
 
   ],
   exports: [
+    MatDialogModule,
     MatMenuModule,
     MatListModule,
     MatButtonModule,

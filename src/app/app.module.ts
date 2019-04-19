@@ -15,6 +15,7 @@ import { NotificationsComponent } from './sections/notifications/notifications.c
 import { SubnetComponent } from './sections/subnet/subnet.component';
 import { NetworkComponent } from './sections/network/network.component';
 import { NodeInfoComponent } from './sections/shared/node-info.component';
+import { ContactDialogComponent } from './sections/notifications/contact-dialog.component';
 
 
 
@@ -29,7 +30,8 @@ import { NodeInfoComponent } from './sections/shared/node-info.component';
     SidenavListComponent,
     SubnetComponent,
     NetworkComponent,
-    NotificationsComponent
+    NotificationsComponent,
+    ContactDialogComponent
   ],
   imports: [
     AgGridModule.withComponents([]),
@@ -41,6 +43,7 @@ import { NodeInfoComponent } from './sections/shared/node-info.component';
     RoutingModule
   ],
   providers: [],
+  entryComponents: [ContactDialogComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
